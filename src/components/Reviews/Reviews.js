@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { fetchFilmReviews } from '../../service/film-api';
-import ReviewsItem from '../ReviewsItem';
+import ReviewsItem from '../';
 
 class Reviews extends Component {
 	state = {
