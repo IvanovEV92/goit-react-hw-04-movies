@@ -13,10 +13,10 @@ class Home extends Component {
 
 	filmApi = () => {
 		fetchFilmList()
-			.then((data) => {
+			.then(data => {
 				this.setState({ films: data });
 			})
-			.catch((error) => this.setState({ error }))
+			.catch(error => this.setState({ error }))
 			.finally(() => this.setState());
 	};
 

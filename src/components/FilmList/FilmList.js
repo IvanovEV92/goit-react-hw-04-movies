@@ -1,15 +1,24 @@
 import FilmListItem from '../FilmListItem';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const FilmList = ({ filmList }) => {
-	console.log(filmList);
+const FilmList = ({ filmList, location }) => {
 	return (
 		<ul>
-			{filmList.map(({ id, poster_path, title, release_date }) => {
+			{filmList.map(({ id, poster_path, title, name, release_date }) => {
 				return (
 					<li key={id}>
-						<Link to={`/movies/${id}`}>
-							<FilmListItem img={poster_path} title={title} date={release_date} />
+						<Link
+							to={{
+								pathname: `/movies/${id}`,
+								state: { from: location },
+							}}
+						>
+							<FilmListItem
+								img={poster_path}
+								title={title ? title : name}
+								date={release_date}
+							/>
 						</Link>
 					</li>
 				);
@@ -18,4 +27,8 @@ const FilmList = ({ filmList }) => {
 	);
 };
 
-export default FilmList;
+FilmList.propTypes = {
+	filmList: PropTypes.array,
+	location: PropTypes.object.isRequired,
+};
+export default withRouter(FilmList);
