@@ -18,7 +18,7 @@ const fetchFilmDetails = async id => {
 
 const fetchFilmSearch = async ({ searchQuery = '', currentPage = 1 }) => {
 	return await axios
-		.get('search/movie', { params: { query: searchQuery, page: currentPage } })
+		.get('search/movie/', { params: { query: searchQuery, page: currentPage } })
 		.then(({ data: { results } }) => results);
 };
 

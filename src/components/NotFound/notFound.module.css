@@ -1,0 +1,7 @@
+.notFound {
+	height: 600px;
+	background-image: url(./Video404.png);
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import NotFoundPage from '../components/NotFound';
 class NotFound extends Component {
 	render() {
-		return <h1>Такой страницы нет. УПС</h1>;
+		return <NotFoundPage />;
 	}
 }
 
