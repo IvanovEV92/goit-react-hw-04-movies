@@ -1,0 +1,37 @@
+.navigation {
+	display: flex;
+	height: 300px;
+	justify-content: center;
+	align-items: center;
+}
+
+.navigation__button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: white;
+	border-radius: 5px;
+}
+.navigation__button:hover,
+.navigation__button:focus,
+.btnActive {
+	cursor: pointer;
+	background-color: #ff8ba7;
+	color: white;
+	border-radius: 5px;
+}
+
+.navigation__button:first-child {
+	margin-right: 10px;
+}
+.navigation__link {
+	color: #33272a;
+	padding: 10px 40px;
+	font-size: 24px;
+	font-weight: bold;
+}
+.navigation__link:hover,
+.btnActive {
+	color: white;
+}

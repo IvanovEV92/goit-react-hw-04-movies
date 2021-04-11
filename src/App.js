@@ -1,7 +1,6 @@
-import './App.css';
 import Loader from 'react-loader-spinner';
 import { Suspense, lazy } from 'react';
-
+import routes from './routes';
 import AppBar from './components/AppBar';
 import { Route, Switch } from 'react-router-dom';
 
@@ -23,13 +22,13 @@ const App = () => (
 		<AppBar />
 		<Suspense
 			fallback={
-				<Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+				<Loader type="ThreeDots" color="#ff8ba7" height={80} width={80} />
 			}
 		>
 			<Switch>
-				<Route exact path="/" component={Home} />
-				<Route path="/movies/:moviesId" component={MovieDetails} />
-				<Route path="/movies" component={Movies} />
+				<Route exact path={routes.home} component={Home} />
+				<Route path={routes.movieDetails} component={MovieDetails} />
+				<Route path={routes.movies} component={Movies} />
 				<Route component={NotFound} />
 			</Switch>
 		</Suspense>

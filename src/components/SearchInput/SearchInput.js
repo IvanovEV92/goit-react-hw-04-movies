@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from './searchInput.module.css';
 class SearchInput extends Component {
 	static propTypes = {
 		onSubmit: PropTypes.func.isRequired,
@@ -16,21 +17,20 @@ class SearchInput extends Component {
 
 	render() {
 		return (
-			<header>
-				<form onSubmit={this.handleSubmit}>
-					<input
-						type="text"
-						autoComplete="off"
-						autoFocus
-						placeholder="Search films"
-						value={this.state.query}
-						onChange={this.handleChange}
-					/>
-					<button type="submit">
-						<span>Search</span>
-					</button>
-				</form>
-			</header>
+			<form onSubmit={this.handleSubmit} className={styles.form}>
+				<input
+					type="text"
+					autoComplete="off"
+					autoFocus
+					placeholder="Search films"
+					value={this.state.query}
+					onChange={this.handleChange}
+					className={styles.input}
+				/>
+				<button type="submit" className={styles.btn}>
+					<span>Search</span>
+				</button>
+			</form>
 		);
 	}
 }

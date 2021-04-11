@@ -1,7 +1,7 @@
 import { NavLink, Route, withRouter } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Loader from 'react-loader-spinner';
-
+import styles from './additionalInfo.module.css';
 import PropTypes from 'prop-types';
 
 const Cast = lazy(() =>
@@ -12,27 +12,37 @@ const Reviews = lazy(() =>
 );
 const AdditionalInfo = ({ match }) => {
 	return (
-		<>
-			<div>
-				<h4>Additional information</h4>
-				<ul>
-					<li>
-						<NavLink to={`${match.url}/cast`}>Cast</NavLink>
-					</li>
-					<li>
-						<NavLink to={`${match.url}/reviews`}>Reviews</NavLink>
-					</li>
-				</ul>
-			</div>
+		<section className={styles.additional}>
+			<h4 className={styles.additional__title}>Additional information</h4>
+			<ul className={styles.additional__list}>
+				<li className={styles.additional__item}>
+					<NavLink
+						exact
+						className={styles.additional__btn}
+						to={`${match.url}/cast`}
+					>
+						Cast
+					</NavLink>
+				</li>
+				<li className={styles.additional__item}>
+					<NavLink
+						exact
+						className={styles.additional__btn}
+						to={`${match.url}/reviews`}
+					>
+						Reviews
+					</NavLink>
+				</li>
+			</ul>
 			<Suspense
 				fallback={
-					<Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+					<Loader type="ThreeDots" color="#ff8ba7" height={80} width={80} />
 				}
 			>
 				<Route exact path={`${match.path}/cast`} component={Cast} />
 				<Route exact path={`${match.path}/reviews`} component={Reviews} />
 			</Suspense>
-		</>
+		</section>
 	);
 };
 

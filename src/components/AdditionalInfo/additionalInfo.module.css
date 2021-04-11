@@ -1,0 +1,25 @@
+.additional {
+}
+.additional__title {
+	margin-top: 20px;
+	font-size: 20px;
+}
+.additional__list {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+.additional__item:first-child {
+	margin-right: 15px;
+}
+.additional__btn {
+	display: flex;
+	justify-content: center;
+	color: black;
+	border-radius: 5px;
+	width: 100px;
+	padding: 10px 40px;
+	background-color: #ff8ba7;
+	font-size: 20px;
+	font-weight: bold;
+}

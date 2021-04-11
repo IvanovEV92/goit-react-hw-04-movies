@@ -39,10 +39,10 @@ class Movies extends Component {
 
 	render() {
 		return (
-			<>
+			<main>
 				<SearchInput onSubmit={this.onChangeQuery} />
 				<FilmList filmList={this.state.films} />
-			</>
+			</main>
 		);
 	}
 }

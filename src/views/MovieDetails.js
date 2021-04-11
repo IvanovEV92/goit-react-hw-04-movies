@@ -29,7 +29,6 @@ class MovieDetails extends Component {
 			title,
 			poster_path,
 			overview,
-			genres,
 			release_date,
 			vote_average,
 		} = this.state;
@@ -41,7 +40,6 @@ class MovieDetails extends Component {
 					img={poster_path}
 					description={overview}
 					date={release_date}
-					genres={genres}
 					vote_average={vote_average}
 				/>
 			</>

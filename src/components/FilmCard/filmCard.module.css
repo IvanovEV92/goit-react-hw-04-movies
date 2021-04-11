@@ -1,0 +1,22 @@
+.filmCard {
+	display: flex;
+	margin-top: 50px;
+	text-align: left;
+}
+.filmCard__img {
+	width: 300px;
+	margin-right: 30px;
+}
+.filmCard__rating {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.filmCard__description {
+	display: flex;
+	flex-direction: column;
+}
+.filmCard__label {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}

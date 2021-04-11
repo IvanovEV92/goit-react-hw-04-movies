@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import FilmList from '../components/FilmList';
 import { fetchFilmList } from '../service/film-api';
-
 class Home extends Component {
 	state = {
 		films: [],
@@ -22,10 +21,9 @@ class Home extends Component {
 
 	render() {
 		return (
-			<>
-				<h1>Популярные фильмы</h1>
-				<FilmList filmList={this.state.films} />
-			</>
+			<main>
+				<FilmList filmList={this.state.films} title="Popular Movies" />
+			</main>
 		);
 	}
 }
